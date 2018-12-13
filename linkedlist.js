@@ -1,7 +1,6 @@
 'use strict';
 class _Node {
   constructor(value, next) {
-    console.log('Really hitting constructor');
     this.value=value;
     this.next=next;
   }
@@ -19,16 +18,16 @@ class _LinkedList{
 
 
   insertLast(item){
-    if(this.head = null){
-      this.insertFirst(item)
+    if(this.head === null){
+      this.insertFirst(item);
     }else{
       let tempNode = this.head; 
 
       while(tempNode.next !== null){
         tempNode = tempNode.next; 
-      
-    } tempNode.next = new _Node(item, null);; 
-   }
+      } 
+      tempNode.next = new _Node(item, null); 
+    }
   }
 
   // when you get to num make newNode have prevNode point to new, and new Point to next // 
@@ -42,7 +41,7 @@ class _LinkedList{
       currentNode = currentNode.next;
       tracker ++; 
     } previousNode.next = item; 
-      item.next = currentNode; 
+    item.next = currentNode; 
   }
 
   find(item) {
@@ -50,9 +49,9 @@ class _LinkedList{
     if (!this.head) return null; 
     while(tempNode.value !== item){
       if(tempNode.next === null){
-        return null
+        return null;
       }else{
-        tempNode = tempNode.next
+        tempNode = tempNode.next;
       } 
     } return tempNode;  
   }
@@ -61,7 +60,7 @@ class _LinkedList{
     if(!this.head)return null; 
 
     if(this.head.value === item){
-     this.head = this.head.next; 
+      this.head = this.head.next; 
       return; 
     } 
     let currentNode = this.head; 
@@ -78,9 +77,9 @@ class _LinkedList{
 }
 
 function main(){
-  let sll = new _LinkedList; 
-
-  console.log(sll.insertFirst('apollo'));
-  console.log(sll);
+  let SLL = new _LinkedList; 
+  SLL.insertFirst('apollo');
+  console.log(SLL);
 }
 
+main();
