@@ -1,11 +1,9 @@
-'use strict'; 
-
-//node class
-
+'use strict';
 class _Node {
-  constructor(value, next){
-    this.value=value; 
-    this.next=next; 
+  constructor(value, next) {
+    console.log('Really hitting constructor');
+    this.value=value;
+    this.next=next;
   }
 }
 
@@ -79,16 +77,10 @@ class _LinkedList{
 
 }
 
+function main(){
+  let sll = new _LinkedList; 
 
-  //create instance of new node
-  //if beginning then point head to new node 
-  //else point previous node to new node and new node to next
-  //else if end node point previous end to new node and new node to null 
-
-
-
-
-  //retrieval
-  //removal
-  //
+  console.log(sll.insertFirst('apollo'));
+  console.log(sll);
 }
+
